@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F1EDED"
+    tools:context=".ChartActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+<!--        Recieve profile picture-->
+        <com.blogspot.atifsoftwares.circularimageview.CircularImageView
+            android:id="@+id/profileChat"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_defaultuser"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+<!--            Recieve User's Name-->
+
+            <TextView
+                android:id="@+id/nameChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="his name"
+                android:textSize="18sp"
+                android:textColor="@color/textcolor"/>
+
+<!--            Recieve User state ie,Offline or Online-->
+
+            <TextView
+                android:id="@+id/UserStateChat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textColor="@color/textcolor"/>
+
+        </LinearLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    RecuclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_below="@+id/toolbar"/>
+
+
+
+
+<!--    send message edit text and button layout-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/textcolor"
+        android:orientation="horizontal">
+
+
+
+            <!--        messaging ot chating Edit text-->
+            <EditText
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/messagechat"
+                android:padding="15dp"
+                android:layout_weight="80"
+                android:hint="start typing"
+                android:inputType="textCapSentences|textMultiLine"
+                android:background="@null" />
+
+            <!--        send message -->
+
+            <ImageButton
+                android:layout_weight="20"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:id="@+id/sendChat"
+                android:src="@drawable/ic_sendicon"
+                android:background="@null"
+                />
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>
